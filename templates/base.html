@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комментарии</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="comment-section">
+        <h2>Комментарии</h2>
+
+        <div class="comment">
+            <div class="comment-info">
+                <img src="user1.jpg" alt="User Photo">
+                <div class="details">
+                    <span class="username">UserName1</span>
+                    <span class="date">2024-09-03</span>
+                </div>
+            </div>
+            <div class="rating">
+                Рейтинг: <span>+10</span>
+            </div>
+        </div>
+
+        <div class="reply">
+            <div class="comment">
+                <div class="comment-info">
+                    <img src="user2.jpg" alt="User Photo">
+                    <div class="details">
+                        <span class="username">UserName2</span>
+                        <span class="date">2024-09-03</span>
+                    </div>
+                </div>
+                <div class="rating">
+                    Рейтинг: <span>+5</span>
+                </div>
+            </div>
+        </div>
+
+        <form class="comment-form" action="submit_comment.php" method="POST">
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required pattern="[A-Za-z0-9]+">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="homepage">Home page:</label>
+            <input type="url" id="homepage" name="homepage">
+
+            <label for="captcha">CAPTCHA:</label>
+            <img src="captcha.jpg" alt="CAPTCHA">
+            <input type="text" id="captcha" name="captcha" required pattern="[A-Za-z0-9]+">
+
+            <label for="text">Text:</label>
+            <textarea id="text" name="text" required></textarea>
+
+            <button type="submit">Добавить комментарий</button>
+        </form>
+    </div>
+</body>
+</html>
